@@ -1,6 +1,6 @@
 # zoo_animales.py
 
-from gestion.Zona import Zona
+from gestion.zona import Zona
 
 
 class Animal:
