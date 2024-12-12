@@ -28,3 +28,12 @@ class Reptil(Animal):
         return self.largoCola
 
     def setLargoCola(self, largoCola):
+        self.largoCola = largoCola
+
+    @staticmethod
+    def crearIguana(nombre, edad, genero):
+        return Reptil(nombre, edad, "bosque", genero, "verde", 2)
+
+    @staticmethod
+    def crearSerpiente(nombre, edad, genero):
+        return Reptil(nombre, edad, "desierto", genero, "amarillo", 1)
