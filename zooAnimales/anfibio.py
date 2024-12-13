@@ -1,3 +1,6 @@
+# zooAnimales/anfibio.py
+from zooAnimales.animal import Animal  # Importa la clase Animal
+
 class Anfibio(Animal):
     ranas = 0
     salamandras = 0
@@ -11,4 +14,18 @@ class Anfibio(Animal):
     @staticmethod
     def crearRana(nombre, edad, genero):
         rana = Anfibio(nombre, edad, "charcos", genero, "verde", False)
-        Anfibio.r
+        Anfibio.ranas += 1
+        Anfibio.anfibios.append(rana)
+        return rana
+
+    @staticmethod
+    def crearSalamandra(nombre, edad, genero):
+        salamandra = Anfibio(nombre, edad, "bosques", genero, "amarillo", True)
+        Anfibio.salamandras += 1
+        Anfibio.anfibios.append(salamandra)
+        return salamandra
+
+    @staticmethod
+    def cantidadAnfibios():
+        return len(Anfibio.anfibios)
+

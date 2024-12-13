@@ -1,3 +1,6 @@
+# zooAnimales/reptil.py
+from zooAnimales.animal import Animal  # Importa la clase Animal
+
 class Reptil(Animal):
     iguanas = 0
     serpientes = 0
@@ -25,3 +28,4 @@ class Reptil(Animal):
     @staticmethod
     def cantidadReptiles():
         return len(Reptil.reptiles)
+

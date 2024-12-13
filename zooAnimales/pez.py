@@ -1,3 +1,6 @@
+# zooAnimales/pez.py
+from zooAnimales.animal import Animal  # Importa la clase Animal
+
 class Pez(Animal):
     salmones = 0
     bacalaos = 0
@@ -25,4 +28,5 @@ class Pez(Animal):
     @staticmethod
     def cantidadPeces():
         return len(Pez.peces)
+
 

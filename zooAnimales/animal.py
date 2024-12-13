@@ -1,3 +1,4 @@
+# zooAnimales/animal.py
 class Animal:
     totalAnimales = 0
 
@@ -61,5 +62,5 @@ class Animal:
     def getZona(self):
         return self.zona
 
-    def setZona(self, zona):
-        self.zona = zona
+    def
+

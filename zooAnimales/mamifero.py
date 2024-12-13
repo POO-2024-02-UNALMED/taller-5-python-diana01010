@@ -1,3 +1,6 @@
+# zooAnimales/mamifero.py
+from zooAnimales.animal import Animal  # Importa la clase Animal
+
 class Mamifero(Animal):
     caballos = 0
     leones = 0
@@ -25,4 +28,5 @@ class Mamifero(Animal):
     @staticmethod
     def cantidadMamiferos():
         return len(Mamifero.mamiferos)
+
 

@@ -1,3 +1,6 @@
+# zooAnimales/ave.py
+from zooAnimales.animal import Animal  # Importa la clase Animal
+
 class Ave(Animal):
     halcones = 0
     aguilas = 0
@@ -24,3 +27,4 @@ class Ave(Animal):
     @staticmethod
     def cantidadAves():
         return len(Ave.aves)
+
