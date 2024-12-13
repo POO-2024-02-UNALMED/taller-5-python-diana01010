@@ -1,5 +1,3 @@
-from zooAnimales.animal import Animal
-
 class Mamifero(Animal):
     caballos = 0
     leones = 0
@@ -37,3 +35,4 @@ class Mamifero(Animal):
     @staticmethod
     def crearLeon(nombre, edad, genero):
         return Mamifero(nombre, edad, "sabana", genero, True, 4)
+

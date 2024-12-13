@@ -1,5 +1,3 @@
-from gestion.zona import Zona
-
 class Zoologico:
     def __init__(self, nombre, ubicacion):
         self.nombre = nombre
@@ -12,7 +10,7 @@ class Zoologico:
     def cantidadTotalAnimales(self):
         total = 0
         for zona in self.zonas:
-            total += zona.cantidadAnimales()
+            total += zona.cantidadAnimales()  # Aquí obtiene la cantidad total de animales en cada zona
         return total
 
     # Métodos getters y setters
@@ -30,3 +28,4 @@ class Zoologico:
 
     def getZonas(self):
         return self.zonas
+
