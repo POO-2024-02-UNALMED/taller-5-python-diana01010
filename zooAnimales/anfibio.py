@@ -1,19 +1,14 @@
 class Anfibio(Animal):
     ranas = 0
     salamandras = 0
+    anfibios = []
 
-    @staticmethod
-    def resetContadores():
-        Anfibio.ranas = 0
-        Anfibio.salamandras = 0
+    def __init__(self, nombre, edad, habitat, genero, color_piel, venenoso):
+        super().__init__(nombre, edad, habitat, genero)
+        self.color_piel = color_piel
+        self.venenoso = venenoso
 
     @staticmethod
     def crearRana(nombre, edad, genero):
-        Anfibio.ranas += 1
-        return Anfibio(nombre, edad, "pradera", genero, "verde", False)
-
-    @staticmethod
-    def crearSalamandra(nombre, edad, genero):
-        Anfibio.salamandras += 1
-        return Anfibio(nombre, edad, "bosque", genero, "amarillo", True)
-
+        rana = Anfibio(nombre, edad, "charcos", genero, "verde", False)
+        Anfibio.r

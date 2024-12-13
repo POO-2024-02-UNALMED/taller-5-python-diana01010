@@ -6,8 +6,8 @@ class Animal:
         self.edad = edad
         self.habitat = habitat
         self.genero = genero
-        Animal.totalAnimales += 1
         self.zona = None
+        Animal.totalAnimales += 1
 
     @staticmethod
     def getTotalAnimales():
@@ -15,18 +15,25 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        return f"Mamíferos: {Mamifero.cantidadMamiferos()}\nAves: {Ave.cantidadAves()}\nReptiles: {Reptil.cantidadReptiles()}\nPeces: {Pez.cantidadPeces()}\nAnfibios: {Anfibio.cantidadAnfibios()}"
+        return f"Mamiferos: {Mamifero.cantidadMamiferos()}\n" \
+               f"Aves: {Ave.cantidadAves()}\n" \
+               f"Reptiles: {Reptil.cantidadReptiles()}\n" \
+               f"Peces: {Pez.cantidadPeces()}\n" \
+               f"Anfibios: {Anfibio.cantidadAnfibios()}"
 
-    def __str__(self):
-        info = f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi género es {self.genero}"
+    def toString(self):
         if self.zona:
-            info += f", la zona en la que me ubico es {self.zona.getNombre()}, en el {self.zona.getZoo().getNombre()}."
-        return info
+            return f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, " \
+                   f"habito en {self.habitat} y mi genero es {self.genero}, " \
+                   f"la zona en la que me ubico es {self.zona.getNombre()}, " \
+                   f"en el {self.zona.getZoo().getNombre()}. "
+        else:
+            return f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, " \
+                   f"habito en {self.habitat} y mi genero es {self.genero}"
 
     def movimiento(self):
         return "desplazarse"
 
-    # Métodos getters y setters
     def getNombre(self):
         return self.nombre
 
