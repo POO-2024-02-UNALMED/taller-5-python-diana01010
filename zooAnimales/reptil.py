@@ -1,39 +1,19 @@
-from zooAnimales.animal import Animal
-
 class Reptil(Animal):
     iguanas = 0
     serpientes = 0
 
-    def __init__(self, nombre, edad, habitat, genero, colorEscamas, largoCola):
-        super().__init__(nombre, edad, habitat, genero)
-        self.colorEscamas = colorEscamas
-        self.largoCola = largoCola
-        if nombre.lower() == "iguana":
-            Reptil.iguanas += 1
-        elif nombre.lower() == "serpiente":
-            Reptil.serpientes += 1
-
     @staticmethod
-    def cantidadReptiles():
-        return Reptil.iguanas + Reptil.serpientes
-
-    # Métodos getters y setters
-    def getColorEscamas(self):
-        return self.colorEscamas
-
-    def setColorEscamas(self, colorEscamas):
-        self.colorEscamas = colorEscamas
-
-    def getLargoCola(self):
-        return self.largoCola
-
-    def setLargoCola(self, largoCola):
-        self.largoCola = largoCola
+    def resetContadores():
+        Reptil.iguanas = 0
+        Reptil.serpientes = 0
 
     @staticmethod
     def crearIguana(nombre, edad, genero):
-        return Reptil(nombre, edad, "bosque", genero, "verde", 2)
+        Reptil.iguanas += 1
+        return Reptil(nombre, edad, "selva", genero, "verde", 1)
 
     @staticmethod
     def crearSerpiente(nombre, edad, genero):
-        return Reptil(nombre, edad, "desierto", genero, "amarillo", 1)
+        Reptil.serpientes += 1
+        return Reptil(nombre, edad, "desierto", genero, "amarillo", 0)
+
