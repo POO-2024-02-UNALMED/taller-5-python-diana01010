@@ -1,54 +1,38 @@
-// Paquete zooAnimales
-package zooAnimales;
+from zooAnimales.animal import Animal
 
-import gestion.Zona;
+class Reptil(Animal):
+    iguanas = 0
+    serpientes = 0
 
-import java.util.ArrayList;
+    def __init__(self, nombre, edad, habitat, genero, colorEscamas, largoCola):
+        super().__init__(nombre, edad, habitat, genero)
+        self.colorEscamas = colorEscamas
+        self.largoCola = largoCola
+        if nombre.lower() == "iguana":
+            Reptil.iguanas += 1
+        elif nombre.lower() == "serpiente":
+            Reptil.serpientes += 1
 
-public class Reptil extends Animal {
-    private static int iguanas;
-    private static int serpientes;
-    private static ArrayList<Reptil> reptiles = new ArrayList<>();
+    @staticmethod
+    def cantidadReptiles():
+        return Reptil.iguanas + Reptil.serpientes
 
-    private String colorEscamas;
-    private int largoCola;
+    # Métodos getters y setters
+    def getColorEscamas(self):
+        return self.colorEscamas
 
-    public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
-        super(nombre, edad, habitat, genero);
-        this.colorEscamas = colorEscamas;
-        this.largoCola = largoCola;
-        reptiles.add(this);
-    }
+    def setColorEscamas(self, colorEscamas):
+        self.colorEscamas = colorEscamas
 
-    public static Reptil crearIguana(String nombre, int edad, String genero) {
-        Reptil iguana = new Reptil(nombre, edad, "bosques", genero, "verde", 3);
-        iguanas++;
-        return iguana;
-    }
+    def getLargoCola(self):
+        return self.largoCola
 
-    public static Reptil crearSerpiente(String nombre, int edad, String genero) {
-        Reptil serpiente = new Reptil(nombre, edad, "selva", genero, "marrón", 5);
-        serpientes++;
-        return serpiente;
-    }
+    def setLargoCola(self, largoCola):
+        self.largoCola = largoCola
 
-    public static int cantidadReptiles() {
-        return reptiles.size();
-    }
+    def movimiento(self):
+        return "deslizarse"
 
-    public static int getIguanas() {
-        return iguanas;
-    }
+    def toString(self):
+        return super().toString() + ", mi color de escamas es " + self.colorEscamas + " y mi largo de cola es " + str(self.largoCola)
 
-    public static int getSerpientes() {
-        return serpientes;
-    }
-
-    public String getColorEscamas() {
-        return colorEscamas;
-    }
-
-    public int getLargoCola() {
-        return largoCola;
-    }
-}
