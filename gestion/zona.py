@@ -6,11 +6,11 @@ class Zona:
 
     def agregarAnimales(self, animal):
         self.animales.append(animal)
-        animal.setZona(self)  # Asociar el animal con esta zona
 
     def cantidadAnimales(self):
         return len(self.animales)
 
+    # Métodos getters y setters
     def getNombre(self):
         return self.nombre
 

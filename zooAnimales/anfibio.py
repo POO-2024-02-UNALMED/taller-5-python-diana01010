@@ -1,31 +1,39 @@
-# zooAnimales/anfibio.py
-from zooAnimales.animal import Animal  # Importa la clase Animal
+from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
     ranas = 0
     salamandras = 0
-    anfibios = []
 
-    def __init__(self, nombre, edad, habitat, genero, color_piel, venenoso):
+    def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
         super().__init__(nombre, edad, habitat, genero)
-        self.color_piel = color_piel
+        self.colorPiel = colorPiel
+        self.venenoso = venenoso
+        if nombre.lower() == "rana":
+            Anfibio.ranas += 1
+        elif nombre.lower() == "salamandra":
+            Anfibio.salamandras += 1
+
+    @staticmethod
+    def cantidadAnfibios():
+        return Anfibio.ranas + Anfibio.salamandras
+
+    # Métodos getters y setters
+    def getColorPiel(self):
+        return self.colorPiel
+
+    def setColorPiel(self, colorPiel):
+        self.colorPiel = colorPiel
+
+    def isVenenoso(self):
+        return self.venenoso
+
+    def setVenenoso(self, venenoso):
         self.venenoso = venenoso
 
     @staticmethod
     def crearRana(nombre, edad, genero):
-        rana = Anfibio(nombre, edad, "charcos", genero, "verde", False)
-        Anfibio.ranas += 1
-        Anfibio.anfibios.append(rana)
-        return rana
+        return Anfibio(nombre, edad, "agua", genero, "verde", False)
 
     @staticmethod
     def crearSalamandra(nombre, edad, genero):
-        salamandra = Anfibio(nombre, edad, "bosques", genero, "amarillo", True)
-        Anfibio.salamandras += 1
-        Anfibio.anfibios.append(salamandra)
-        return salamandra
-
-    @staticmethod
-    def cantidadAnfibios():
-        return len(Anfibio.anfibios)
-
+        return Anfibio(nombre, edad, "bosque", genero, "amarillo", True)

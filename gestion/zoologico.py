@@ -1,3 +1,5 @@
+from gestion.zona import Zona
+
 class Zoologico:
     def __init__(self, nombre, ubicacion):
         self.nombre = nombre
@@ -6,12 +8,14 @@ class Zoologico:
 
     def agregarZonas(self, zona):
         self.zonas.append(zona)
-        zona.setZoo(self)  # Asociar la zona al zoológico
 
     def cantidadTotalAnimales(self):
-        total = sum(zona.cantidadAnimales() for zona in self.zonas)
+        total = 0
+        for zona in self.zonas:
+            total += zona.cantidadAnimales()
         return total
 
+    # Métodos getters y setters
     def getNombre(self):
         return self.nombre
 
@@ -26,4 +30,3 @@ class Zoologico:
 
     def getZonas(self):
         return self.zonas
-
