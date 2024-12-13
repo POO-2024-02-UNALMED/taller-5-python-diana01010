@@ -1,5 +1,3 @@
-from zooAnimales.animal import Animal
-
 class Reptil(Animal):
     iguanas = 0
     serpientes = 0
@@ -12,6 +10,14 @@ class Reptil(Animal):
             Reptil.iguanas += 1
         elif nombre.lower() == "serpiente":
             Reptil.serpientes += 1
+
+    @staticmethod
+    def crearIguana(nombre, edad, genero):
+        # Asumiendo valores predeterminados para habitat, colorEscamas y largoCola
+        habitat = "selva"
+        colorEscamas = "verde"
+        largoCola = 5
+        return Reptil(nombre, edad, habitat, genero, colorEscamas, largoCola)
 
     @staticmethod
     def cantidadReptiles():
