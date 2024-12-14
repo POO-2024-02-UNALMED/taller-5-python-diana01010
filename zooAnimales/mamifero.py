@@ -11,7 +11,7 @@ class Mamifero(Animal):
         
         # Incrementar el contador según el nombre del animal
         if nombre.lower() == "caballo":
-            Mamifero.caballos += 1
+            Mamifero.caballos += 2
         elif nombre.lower() == "leon":
             Mamifero.leones += 1
 
