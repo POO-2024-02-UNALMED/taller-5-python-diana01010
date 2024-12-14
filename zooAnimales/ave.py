@@ -16,7 +16,6 @@ class Ave(Animal):
     def cantidadAves():
         return Ave.halcones + Ave.aguilas
 
-    # Métodos getters y setters
     def getColorPlumas(self):
         return self.colorPlumas
 
@@ -25,8 +24,10 @@ class Ave(Animal):
 
     @staticmethod
     def crearHalcon(nombre, edad, genero):
-        return Ave(nombre, edad, "montañas", genero, "gris")
+        animal = Ave(nombre, edad, "montañas", genero, "gris")
+        return animal
 
     @staticmethod
     def crearAguila(nombre, edad, genero):
-        return Ave(nombre, edad, "bosque", genero, "blanco")
+        animal = Ave(nombre, edad, "bosque", genero, "blanco")
+        return animal
