@@ -1,5 +1,3 @@
-# Ave.py
-
 from zooAnimales.animal import Animal
 
 class Ave(Animal):
@@ -18,6 +16,13 @@ class Ave(Animal):
     def cantidadAves():
         return Ave.halcones + Ave.aguilas
 
+    # Métodos getters y setters
+    def getColorPlumas(self):
+        return self.colorPlumas
+
+    def setColorPlumas(self, colorPlumas):
+        self.colorPlumas = colorPlumas
+
     @staticmethod
     def crearHalcon(nombre, edad, genero):
         return Ave(nombre, edad, "montañas", genero, "gris")
@@ -25,4 +30,3 @@ class Ave(Animal):
     @staticmethod
     def crearAguila(nombre, edad, genero):
         return Ave(nombre, edad, "bosque", genero, "blanco")
-

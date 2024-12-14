@@ -1,5 +1,3 @@
-# Pez.py
-
 from zooAnimales.animal import Animal
 
 class Pez(Animal):
@@ -19,6 +17,19 @@ class Pez(Animal):
     def cantidadPeces():
         return Pez.salmones + Pez.bacalaos
 
+    # Métodos getters y setters
+    def getColorEscamas(self):
+        return self.colorEscamas
+
+    def setColorEscamas(self, colorEscamas):
+        self.colorEscamas = colorEscamas
+
+    def getCantidadAletas(self):
+        return self.cantidadAletas
+
+    def setCantidadAletas(self, cantidadAletas):
+        self.cantidadAletas = cantidadAletas
+
     @staticmethod
     def crearSalmon(nombre, edad, genero):
         return Pez(nombre, edad, "océano", genero, "plateado", 2)
@@ -26,4 +37,3 @@ class Pez(Animal):
     @staticmethod
     def crearBacalao(nombre, edad, genero):
         return Pez(nombre, edad, "mar", genero, "verde", 3)
-

@@ -1,5 +1,3 @@
-# Animal.py
-
 class Animal:
     totalAnimales = 0
 
@@ -15,6 +13,10 @@ class Animal:
     def getTotalAnimales():
         return Animal.totalAnimales
 
+    @staticmethod
+    def totalPorTipo():
+        return f"Mamíferos: {Mamifero.cantidadMamiferos()}\nAves: {Ave.cantidadAves()}\nReptiles: {Reptil.cantidadReptiles()}\nPeces: {Pez.cantidadPeces()}\nAnfibios: {Anfibio.cantidadAnfibios()}"
+
     def __str__(self):
         info = f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi género es {self.genero}"
         if self.zona:
@@ -23,5 +25,3 @@ class Animal:
 
     def movimiento(self):
         return "desplazarse"
-
-
