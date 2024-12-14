@@ -3,27 +3,33 @@ class Pez(Animal):
     salmones = 0
     bacalaos = 0
 
-    def __init__(self, nombre, edad, habitat, genero, color=None, profundidad=None):
+    def __init__(self, nombre, edad, habitat, genero, color=None, profundidad=None, aletas=0):
         super().__init__(nombre, edad, habitat, genero)
         self.color = color
         self.profundidad = profundidad
+        self.aletas = aletas
 
     @staticmethod
     def cantidadPeces():
         return Pez.salmones + Pez.bacalaos
 
+    def getColorEscamas(self):
+        return self.color  # Agregado para el test
+
+    def getCantidadAletas(self):
+        return self.aletas  # Agregado para el test
+
     @staticmethod
     def crearSalmon(nombre, edad, genero):
-        # Crear un salmón con valores predeterminados
-        pez = Pez(nombre, edad, "océano", genero, "rojo")
-        Pez.salmones += 1  # Incrementar el contador de salmones
+        pez = Pez(nombre, edad, "océano", genero, "rojo", 100, 2)
+        Pez.salmones += 1
         return pez
 
     @staticmethod
     def crearBacalao(nombre, edad, genero):
-        # Crear un bacalao con valores predeterminados
-        pez = Pez(nombre, edad, "mar profundo", genero, "plateado")
-        Pez.bacalaos += 1  # Incrementar el contador de bacalaos
+        pez = Pez(nombre, edad, "mar profundo", genero, "plateado", 200, 3)
+        Pez.bacalaos += 1
         return pez
+
 
 

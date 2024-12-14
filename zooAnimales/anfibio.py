@@ -14,17 +14,19 @@ class Anfibio(Animal):
     def cantidadAnfibios():
         return Anfibio.ranas + Anfibio.salamandras
 
+    def getColorPiel(self):
+        return self.color  # Agregado para el test
+
     @staticmethod
     def crearRana(nombre, edad, genero):
-        # Crear una rana con valores predeterminados
         anfibio = Anfibio(nombre, edad, "pantano", genero, "verde")
         Anfibio.ranas += 1  # Incrementar el contador de ranas
         return anfibio
 
     @staticmethod
     def crearSalamandra(nombre, edad, genero):
-        # Crear una salamandra con valores predeterminados
         anfibio = Anfibio(nombre, edad, "bosque", genero, "marrón")
         Anfibio.salamandras += 1  # Incrementar el contador de salamandras
         return anfibio
+
 

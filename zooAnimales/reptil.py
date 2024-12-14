@@ -4,25 +4,31 @@ class Reptil(Animal):
     iguanas = 0
     serpientes = 0
 
-    def __init__(self, nombre, edad, habitat, genero, color=None, esVenenoso=None):
+    def __init__(self, nombre, edad, habitat, genero, color=None, esVenenoso=None, largoCola=0):
         super().__init__(nombre, edad, habitat, genero)
         self.color = color
         self.esVenenoso = esVenenoso
+        self.largoCola = largoCola
 
     @staticmethod
     def cantidadReptiles():
         return Reptil.iguanas + Reptil.serpientes
 
+    def getColorEscamas(self):
+        return self.color  # Agregado para el test
+
+    def getLargoCola(self):
+        return self.largoCola  # Agregado para el test
+
     @staticmethod
     def crearIguana(nombre, edad, genero):
-        # Crear una iguana con valores predeterminados
-        reptil = Reptil(nombre, edad, "selva", genero, "verde")
+        reptil = Reptil(nombre, edad, "selva", genero, "verde", False, 2)
         Reptil.iguanas += 1  # Incrementar el contador de iguanas
         return reptil
 
     @staticmethod
     def crearSerpiente(nombre, edad, genero):
-        # Crear una serpiente con valores predeterminados
-        reptil = Reptil(nombre, edad, "desierto", genero, "amarillo")
+        reptil = Reptil(nombre, edad, "desierto", genero, "amarillo", True, 5)
         Reptil.serpientes += 1  # Incrementar el contador de serpientes
         return reptil
+
