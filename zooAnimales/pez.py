@@ -14,10 +14,10 @@ class Pez(Animal):
         return Pez.salmones + Pez.bacalaos
 
     def getColorEscamas(self):
-        return self.color  # Agregado para el test
+        return self.color  # Método para obtener el color de las escamas
 
     def getCantidadAletas(self):
-        return self.aletas  # Agregado para el test
+        return self.aletas  # Método agregado para el test
 
     @staticmethod
     def crearSalmon(nombre, edad, genero):
@@ -30,6 +30,7 @@ class Pez(Animal):
         pez = Pez(nombre, edad, "mar profundo", genero, "plateado", 200, 3)
         Pez.bacalaos += 1
         return pez
+
 
 
 

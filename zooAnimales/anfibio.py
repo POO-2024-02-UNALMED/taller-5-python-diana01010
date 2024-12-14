@@ -9,13 +9,17 @@ class Anfibio(Animal):
         self.color = color
         self.esCarnivoro = esCarnivoro
         self.patas = patas
+        self.venenoso = False  # Variable para almacenar si es venenoso o no
 
     @staticmethod
     def cantidadAnfibios():
         return Anfibio.ranas + Anfibio.salamandras
 
     def getColorPiel(self):
-        return self.color  # Agregado para el test
+        return self.color  # Método para obtener el color de la piel
+
+    def isVenenoso(self):
+        return self.venenoso  # Método agregado para el test
 
     @staticmethod
     def crearRana(nombre, edad, genero):
@@ -28,5 +32,6 @@ class Anfibio(Animal):
         anfibio = Anfibio(nombre, edad, "bosque", genero, "marrón")
         Anfibio.salamandras += 1  # Incrementar el contador de salamandras
         return anfibio
+
 
 

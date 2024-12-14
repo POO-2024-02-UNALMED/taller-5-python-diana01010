@@ -15,10 +15,10 @@ class Reptil(Animal):
         return Reptil.iguanas + Reptil.serpientes
 
     def getColorEscamas(self):
-        return self.color  # Agregado para el test
+        return self.color  # Método para obtener el color de las escamas
 
     def getLargoCola(self):
-        return self.largoCola  # Agregado para el test
+        return self.largoCola  # Método agregado para el test
 
     @staticmethod
     def crearIguana(nombre, edad, genero):
@@ -31,4 +31,5 @@ class Reptil(Animal):
         reptil = Reptil(nombre, edad, "desierto", genero, "amarillo", True, 5)
         Reptil.serpientes += 1  # Incrementar el contador de serpientes
         return reptil
+
 
