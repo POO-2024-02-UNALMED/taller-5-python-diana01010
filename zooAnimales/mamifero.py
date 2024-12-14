@@ -9,7 +9,7 @@ class Mamifero(Animal):
         self.pelaje = pelaje
         self.patas = patas
         if nombre.lower() == "caballo":
-            Mamifero.caballos += 3
+            Mamifero.caballos += 1
         elif nombre.lower() == "leon":
             Mamifero.leones += 1
 
@@ -32,10 +32,11 @@ class Mamifero(Animal):
 
     @staticmethod
     def crearCaballo(nombre, edad, genero):
-        animal = Mamifero(nombre, edad, "pradera", genero, True, 4)
-        return animal
+        # Al crear el caballo, el contador de caballos ya se incrementará en el constructor
+        return Mamifero(nombre, edad, "pradera", genero, True, 4)
 
     @staticmethod
     def crearLeon(nombre, edad, genero):
-        animal = Mamifero(nombre, edad, "sabana", genero, True, 4)
-        return animal
+        # Al crear el león, el contador de leones ya se incrementará en el constructor
+        return Mamifero(nombre, edad, "sabana", genero, True, 4)
+
