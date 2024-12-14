@@ -9,6 +9,19 @@ class Animal:
         Animal.totalAnimales += 1
         self.zona = None
 
+    # Métodos getters
+    def getNombre(self):
+        return self.nombre
+
+    def getEdad(self):
+        return self.edad
+
+    def getHabitat(self):
+        return self.habitat
+
+    def getGenero(self):
+        return self.genero
+
     @staticmethod
     def getTotalAnimales():
         return Animal.totalAnimales
@@ -25,3 +38,4 @@ class Animal:
 
     def movimiento(self):
         return "desplazarse"
+
