@@ -9,7 +9,7 @@ class Mamifero(Animal):
         self.pelaje = pelaje
         self.patas = patas
         if nombre.lower() == "caballo":
-            Mamifero.caballos += 1
+            Mamifero.caballos += 3
         elif nombre.lower() == "leon":
             Mamifero.leones += 1
 
