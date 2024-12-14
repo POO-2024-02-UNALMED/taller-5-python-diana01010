@@ -8,12 +8,6 @@ class Ave(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self.colorPlumas = colorPlumas
 
-        # Incrementar los contadores según el tipo de ave
-        if nombre.lower() == "halcon":
-            Ave.halcones += 1
-        elif nombre.lower() == "aguila":
-            Ave.aguilas += 1
-
     @staticmethod
     def cantidadAves():
         # Retorna la cantidad total de aves creadas
@@ -29,9 +23,13 @@ class Ave(Animal):
     @staticmethod
     def crearHalcon(nombre, edad, genero):
         # Crear un halcón con valores predeterminados
-        return Ave(nombre, edad, "montañas", genero, "café glorioso")
+        ave = Ave(nombre, edad, "montañas", genero, "café glorioso")
+        Ave.halcones += 1  # Incrementar el contador de halcones
+        return ave
 
     @staticmethod
     def crearAguila(nombre, edad, genero):
         # Crear un águila con valores predeterminados
-        return Ave(nombre, edad, "montañas", genero, "blanco y amarillo")
+        ave = Ave(nombre, edad, "montañas", genero, "blanco y amarillo")
+        Ave.aguilas += 1  # Incrementar el contador de aguilas
+        return ave
