@@ -40,3 +40,9 @@ class Reptil(Animal):
     @staticmethod
     def crearIguana(nombre, edad, genero):
         return Reptil(nombre, edad, "bosque", genero, "verde", 5)  # Asignamos un valor predeterminado para largo de cola
+
+    # Método estático para crear una Serpiente
+    @staticmethod
+    def crearSerpiente(nombre, edad, genero):
+        return Reptil(nombre, edad, "selva", genero, "marrón", 3)  # Asignamos un valor predeterminado para largo de cola
+
