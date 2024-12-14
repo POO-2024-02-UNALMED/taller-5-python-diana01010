@@ -1,3 +1,5 @@
+# Ave.py
+
 from zooAnimales.animal import Animal
 
 class Ave(Animal):
@@ -16,18 +18,11 @@ class Ave(Animal):
     def cantidadAves():
         return Ave.halcones + Ave.aguilas
 
-    def getColorPlumas(self):
-        return self.colorPlumas
-
-    def setColorPlumas(self, colorPlumas):
-        self.colorPlumas = colorPlumas
-
     @staticmethod
     def crearHalcon(nombre, edad, genero):
-        animal = Ave(nombre, edad, "montañas", genero, "gris")
-        return animal
+        return Ave(nombre, edad, "montañas", genero, "gris")
 
     @staticmethod
     def crearAguila(nombre, edad, genero):
-        animal = Ave(nombre, edad, "bosque", genero, "blanco")
-        return animal
+        return Ave(nombre, edad, "bosque", genero, "blanco")
+

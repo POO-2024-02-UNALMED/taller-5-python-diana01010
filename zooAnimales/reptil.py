@@ -1,4 +1,7 @@
+# Reptil.py
+
 from zooAnimales.animal import Animal
+
 class Reptil(Animal):
     iguanas = 0
     serpientes = 0
@@ -16,19 +19,6 @@ class Reptil(Animal):
     def cantidadReptiles():
         return Reptil.iguanas + Reptil.serpientes
 
-    # Métodos getters y setters
-    def getColorEscamas(self):
-        return self.colorEscamas
-
-    def setColorEscamas(self, colorEscamas):
-        self.colorEscamas = colorEscamas
-
-    def getLargoCola(self):
-        return self.largoCola
-
-    def setLargoCola(self, largoCola):
-        self.largoCola = largoCola
-
     @staticmethod
     def crearIguana(nombre, edad, genero):
         return Reptil(nombre, edad, "humedal", genero, "verde", 3)
@@ -37,8 +27,3 @@ class Reptil(Animal):
     def crearSerpiente(nombre, edad, genero):
         return Reptil(nombre, edad, "jungla", genero, "blanco", 1)
 
-    def movimiento(self):
-        return "reptar"
-
-    def __str__(self):
-        return super().__str__() + f", mi color de escamas es {self.colorEscamas} y mi largo de cola es {self.largoCola}"

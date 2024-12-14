@@ -1,3 +1,5 @@
+# Mamifero.py
+
 from zooAnimales.animal import Animal
 
 class Mamifero(Animal):
@@ -8,10 +10,8 @@ class Mamifero(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self.pelaje = pelaje
         self.patas = patas
-        
-        # Incrementar el contador según el nombre del animal
         if nombre.lower() == "caballo":
-            Mamifero.caballos += 2
+            Mamifero.caballos += 1
         elif nombre.lower() == "leon":
             Mamifero.leones += 1
 
@@ -19,27 +19,11 @@ class Mamifero(Animal):
     def cantidadMamiferos():
         return Mamifero.caballos + Mamifero.leones
 
-    # Métodos getters y setters
-    def isPelaje(self):
-        return self.pelaje
-
-    def setPelaje(self, pelaje):
-        self.pelaje = pelaje
-
-    def getPatas(self):
-        return self.patas
-
-    def setPatas(self, patas):
-        self.patas = patas
-
     @staticmethod
     def crearCaballo(nombre, edad, genero):
-        # Crear un Mamifero de tipo caballo e incrementar el contador
-        animal = Mamifero(nombre, edad, "pradera", genero, True, 4)
-        return animal
+        return Mamifero(nombre, edad, "pradera", genero, True, 4)
 
     @staticmethod
     def crearLeon(nombre, edad, genero):
-        # Crear un Mamifero de tipo león e incrementar el contador
-        animal = Mamifero(nombre, edad, "sabana", genero, True, 4)
-        return animal
+        return Mamifero(nombre, edad, "sabana", genero, True, 4)
+
