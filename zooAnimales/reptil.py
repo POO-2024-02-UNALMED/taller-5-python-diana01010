@@ -35,3 +35,8 @@ class Reptil(Animal):
 
     def toString(self):
         return super().toString() + ", mi color de escamas es " + self.colorEscamas + " y mi largo de cola es " + str(self.largoCola)
+
+    # Método estático para crear una Iguana
+    @staticmethod
+    def crearIguana(nombre, edad, genero):
+        return Reptil(nombre, edad, "bosque", genero, "verde", 5)  # Asignamos un valor predeterminado para largo de cola
