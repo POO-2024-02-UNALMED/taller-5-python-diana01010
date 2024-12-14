@@ -32,10 +32,8 @@ class Mamifero(Animal):
 
     @staticmethod
     def crearCaballo(nombre, edad, genero):
-        animal = Mamifero(nombre, edad, "pradera", genero, True, 4)
-        return animal
+        return Mamifero(nombre, edad, "pradera", genero, True, 4)
 
     @staticmethod
     def crearLeon(nombre, edad, genero):
-        animal = Mamifero(nombre, edad, "sabana", genero, True, 4)
-        return animal
+        return Mamifero(nombre, edad, "sabana", genero, True, 4)
