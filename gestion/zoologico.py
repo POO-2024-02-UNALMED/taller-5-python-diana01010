@@ -26,6 +26,6 @@ class Zoologico:
     def setUbicacion(self, ubicacion):
         self.ubicacion = ubicacion
 
-    def getZonas(self):
+    def getZona(self):
         return self.zonas
 
