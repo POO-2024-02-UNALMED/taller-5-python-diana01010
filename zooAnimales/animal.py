@@ -15,6 +15,7 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
+        from zooAnimales.mamifero import Mamifero
         return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {Reptil.cantidadReptiles()}\nPeces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}"
 
     def __str__(self):
