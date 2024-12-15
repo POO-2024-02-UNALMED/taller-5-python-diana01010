@@ -1,9 +1,4 @@
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.ave import Ave
-from zooAnimales.reptil import Reptil
-from zooAnimales.pez import Pez
-from zooAnimales.anfibio import Anfibio
-
+# Antes de modificar, no se necesita importar nada al principio
 class Animal:
     totalAnimales = 0
 
@@ -16,47 +11,18 @@ class Animal:
         self.zona = None
 
     @staticmethod
-    def getTotalAnimales():
-        return Animal.totalAnimales
-
-    @staticmethod
     def totalPorTipo():
+        # Importar solo cuando se necesite el tipo específico
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.ave import Ave
+        from zooAnimales.reptil import Reptil
+        from zooAnimales.pez import Pez
+        from zooAnimales.anfibio import Anfibio
+        
         return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {Reptil.cantidadReptiles()}\nPeces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}"
-
-    def __str__(self):
-        info = f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi género es {self.genero}"
+    
+    def toString(self):
+        info = f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi genero es {self.genero}"
         if self.zona:
             info += f", la zona en la que me ubico es {self.zona.getNombre()}, en el {self.zona.getZoo().getNombre()}."
         return info
-
-    # Métodos getters y setters
-    def getNombre(self):
-        return self.nombre
-
-    def setNombre(self, nombre):
-        self.nombre = nombre
-
-    def getEdad(self):
-        return self.edad
-
-    def setEdad(self, edad):
-        self.edad = edad
-
-    def getHabitat(self):
-        return self.habitat
-
-    def setHabitat(self, habitat):
-        self.habitat = habitat
-
-    def getGenero(self):
-        return self.genero
-
-    def setGenero(self, genero):
-        self.genero = genero
-
-    def getZona(self):
-        return self.zona
-
-    def setZona(self, zona):
-        self.zona = zona
-
