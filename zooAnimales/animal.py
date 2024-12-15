@@ -1,3 +1,9 @@
+from zooAnimales.mamifero import Mamifero
+from zooAnimales.ave import Ave
+from zooAnimales.reptil import Reptil
+from zooAnimales.pez import Pez
+from zooAnimales.anfibio import Anfibio
+
 class Animal:
     totalAnimales = 0
 
@@ -53,3 +59,4 @@ class Animal:
 
     def setZona(self, zona):
         self.zona = zona
+
