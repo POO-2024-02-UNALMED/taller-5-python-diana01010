@@ -32,5 +32,4 @@ class Ave(Animal):
         return ave
 
     def toString(self):
-        return self.__str__()
-
+        return f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi genero es {self.genero}"
